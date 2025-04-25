@@ -1,0 +1,271 @@
+const products = [
+  {
+    id: 1,
+    title: "iPhone 14 Pro Max",
+    price: 139900,
+    originalPrice: 149900,
+    discount: 7,
+    description: "Apple iPhone 14 Pro Max (128 GB) - Deep Purple. The iPhone 14 Pro Max comes with a stunning Super Retina XDR display with ProMotion technology, A16 Bionic chip, Pro camera system with 48MP main camera, and all-day battery life.",
+    category: "Mobile",
+    brand: "Apple",
+    image: "https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.8,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 2483,
+    highlights: [
+      "128 GB ROM",
+      "17.02 cm (6.7 inch) Super Retina XDR Display",
+      "48MP + 12MP + 12MP | 12MP Front Camera",
+      "A16 Bionic Chip, 6 Core Processor Processor"
+    ]
+  },
+  {
+    id: 2,
+    title: "Samsung Galaxy S23 Ultra",
+    price: 124999,
+    originalPrice: 149999,
+    discount: 17,
+    description: "Samsung Galaxy S23 Ultra 5G (12GB RAM, 256GB, Green). This smartphone comes with a 6.8-inch Dynamic AMOLED 2X display, Snapdragon 8 Gen 2 processor, and a 200MP main camera for exceptional photography.",
+    category: "Mobile",
+    brand: "Samsung",
+    image: "https://images.pexels.com/photos/13793428/pexels-photo-13793428.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.7,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 1853,
+    highlights: [
+      "256 GB ROM",
+      "17.27 cm (6.8 inch) Quad HD+ Display",
+      "200MP + 12MP + 10MP + 10MP | 12MP Front Camera",
+      "Snapdragon 8 Gen 2 Processor"
+    ]
+  },
+  {
+    id: 3,
+    title: "Dell XPS 15",
+    price: 189990,
+    originalPrice: 209990,
+    discount: 10,
+    description: "Dell XPS 15 Laptop with 12th Gen Intel Core i7, 16GB RAM, 512GB SSD, and NVIDIA RTX 3050 Ti. Experience exceptional performance with a stunning 15.6-inch 4K OLED display in a compact design.",
+    category: "Laptop",
+    brand: "Dell",
+    image: "https://images.pexels.com/photos/705675/pexels-photo-705675.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.5,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 482,
+    highlights: [
+      "Intel Core i7 12th Gen Processor",
+      "16 GB DDR5 RAM",
+      "512 GB SSD",
+      "NVIDIA GeForce RTX 3050 Ti (4GB)",
+      "15.6-inch 4K OLED Display"
+    ]
+  },
+  {
+    id: 4,
+    title: "Sony WH-1000XM5",
+    price: 29990,
+    originalPrice: 34990,
+    discount: 14,
+    description: "Sony WH-1000XM5 Wireless Industry Leading Noise Cancelling Headphones with Auto Noise Cancelling Optimizer, Crystal Clear Hands-Free Calling, 30 Hours Battery Life, Multi-Point Connection.",
+    category: "Electronics",
+    brand: "Sony",
+    image: "https://images.pexels.com/photos/3394666/pexels-photo-3394666.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.6,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 3761,
+    highlights: [
+      "Industry-leading noise cancellation",
+      "30-hour battery life",
+      "Crystal clear hands-free calling",
+      "Multi-point connection"
+    ]
+  },
+  {
+    id: 5,
+    title: "LG C2 55-inch OLED TV",
+    price: 129999,
+    originalPrice: 179999,
+    discount: 28,
+    description: "LG C2 55-inch 4K Smart OLED TV with Dolby Vision, Dolby Atmos, 120Hz Refresh Rate, WebOS, AI ThinQ, and Built-in Alexa, Google Assistant - 2023 Model.",
+    category: "Electronics",
+    brand: "LG",
+    image: "https://images.pexels.com/photos/4009409/pexels-photo-4009409.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.7,
+    inStock: true,
+    freeDelivery: false,
+    assured: true,
+    reviews: 852,
+    highlights: [
+      "4K OLED Display",
+      "Dolby Vision & Dolby Atmos",
+      "120Hz Refresh Rate",
+      "WebOS Smart TV"
+    ]
+  },
+  {
+    id: 6,
+    title: "Dyson V15 Detect",
+    price: 59900,
+    originalPrice: 65900,
+    discount: 9,
+    description: "Dyson V15 Detect Cordless Vacuum Cleaner with Laser Dust Detection, 60-Minute Run Time, Anti-tangle Technology, and High-efficiency HEPA Filter.",
+    category: "Home Appliances",
+    brand: "Dyson",
+    image: "https://images.pexels.com/photos/4108282/pexels-photo-4108282.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.4,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 632,
+    highlights: [
+      "Laser dust detection technology",
+      "Up to 60 minutes run time",
+      "Anti-tangle technology",
+      "Advanced HEPA filtration"
+    ]
+  },
+  {
+    id: 7,
+    title: "Apple MacBook Air M2",
+    price: 114900,
+    originalPrice: 119900,
+    discount: 4,
+    description: "Apple MacBook Air with M2 chip: 13.6-inch Liquid Retina display, 8GB RAM, 256GB SSD storage, backlit keyboard, 1080p FaceTime HD camera, Touch ID. Works with iPhone/iPad; Starlight.",
+    category: "Laptop",
+    brand: "Apple",
+    image: "https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.9,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 1245,
+    highlights: [
+      "Apple M2 chip with 8-core CPU",
+      "13.6-inch Liquid Retina display",
+      "8GB unified memory",
+      "256GB SSD storage",
+      "Up to 18 hours battery life"
+    ]
+  },
+  {
+    id: 8,
+    title: "Adidas Originals Sneakers",
+    price: 8999,
+    originalPrice: 12999,
+    discount: 31,
+    description: "Adidas Originals Men's Ultraboost 22 Running Shoes, Breathable Mesh Upper, Boost Midsole, and Continental™ Rubber Outsole for Maximum Grip.",
+    category: "Fashion",
+    brand: "Adidas",
+    image: "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.3,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 3564,
+    highlights: [
+      "Primeknit+ textile upper",
+      "Boost midsole",
+      "Continental™ Rubber outsole",
+      "Weight: 333 g"
+    ]
+  },
+  {
+    id: 9,
+    title: "Samsung 8kg Washing Machine",
+    price: 34990,
+    originalPrice: 44990,
+    discount: 22,
+    description: "Samsung 8 kg, 5 Star, AI Control, Wi-Fi, Digital Inverter, Fully-Automatic Front Load Washing Machine with AI Ecobubble™ Technology and Hygiene Steam.",
+    category: "Home Appliances",
+    brand: "Samsung",
+    image: "https://images.pexels.com/photos/5816341/pexels-photo-5816341.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.3,
+    inStock: true,
+    freeDelivery: false,
+    assured: true,
+    reviews: 742,
+    highlights: [
+      "8 kg capacity",
+      "5 Star energy rating",
+      "Digital Inverter Technology",
+      "AI Control & Wi-Fi",
+      "Hygiene Steam"
+    ]
+  },
+  {
+    id: 10,
+    title: "boAt Airdopes 141",
+    price: 1299,
+    originalPrice: 4490,
+    discount: 71,
+    description: "boAt Airdopes 141 Bluetooth Truly Wireless in Ear Earbuds with 42H Playtime, Beast Mode(Low Latency Upto 80ms) for Gaming, ENx Tech, ASAP Charge, IWP, IPX4 Water Resistance, Smooth Touch Controls.",
+    category: "Electronics",
+    brand: "boAt",
+    image: "https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.2,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 8564,
+    highlights: [
+      "Up to 42 hours of playtime",
+      "Beast Mode for low latency",
+      "IPX4 water resistance",
+      "ASAP Charge - 10 mins = 90 mins playback"
+    ]
+  },
+  {
+    id: 11,
+    title: "Nike Air Zoom Pegasus 39",
+    price: 9695,
+    originalPrice: 12995,
+    discount: 25,
+    description: "Nike Air Zoom Pegasus 39 Men's Running Shoes with Breathable Mesh Upper, Responsive Cushioning, and Durable Rubber Outsole.",
+    category: "Fashion",
+    brand: "Nike",
+    image: "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.5,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 2187,
+    highlights: [
+      "Zoom Air units for responsive cushioning",
+      "Breathable mesh upper",
+      "Durable rubber outsole",
+      "Wide toe box for comfort"
+    ]
+  },
+  {
+    id: 12,
+    title: "Amazon Echo Dot (5th Gen)",
+    price: 4499,
+    originalPrice: 5499,
+    discount: 18,
+    description: "All-new Echo Dot (5th Gen) | Smart speaker with Alexa and improved bass | Charcoal.",
+    category: "Electronics",
+    brand: "Amazon",
+    image: "https://images.pexels.com/photos/4790255/pexels-photo-4790255.jpeg?auto=compress&cs=tinysrgb&w=600",
+    rating: 4.7,
+    inStock: true,
+    freeDelivery: true,
+    assured: true,
+    reviews: 3254,
+    highlights: [
+      "Enhanced audio with clearer vocals",
+      "Deeper bass",
+      "Built-in temperature sensor",
+      "Control compatible smart home devices"
+    ]
+  }
+];
+
+export default products;
